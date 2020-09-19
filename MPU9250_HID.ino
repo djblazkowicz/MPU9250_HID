@@ -52,7 +52,7 @@ static const uint8_t _hidReportDescriptor[] PROGMEM = {
 //#define SerialPort SerialUSB
 
 MPU9250_DMP imu;
-int arrout[4];
+int arrout[16];
 int i = 0;
 //float quat[4];
 union
@@ -91,7 +91,7 @@ void setup()
 
   delay(2000);
 
-  while ( i < 4) {
+  while ( i < 16) {
     arrout[i] = 0;
     i++;
   }
